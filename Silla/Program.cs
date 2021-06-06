@@ -11,11 +11,8 @@ namespace Silla
     {
         static void Main(string[] args)
         {
-            /*GameWindow window = new GameWindow(500, 500);
-            Game gm = new Game(window);
-             */
-            Game gm = new Game(600,600);
-            //Console.ReadLine();
+            Game game = new Game(600, 600, "GAME OPENTK");
+            game.Run(60);//1/60
         }
     }
 }
