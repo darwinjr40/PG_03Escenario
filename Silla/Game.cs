@@ -12,7 +12,7 @@ using System.Drawing;
 namespace Silla
 {
     class Game : GameWindow
-    {
+    {   //darwin estuvo aqui
         Cubo p = new Cubo(2,2,2, 2,10,2);//espalda
         Mesa m = new Mesa(0, 0, 0, 5, 5, 5);
         int q = 0;
