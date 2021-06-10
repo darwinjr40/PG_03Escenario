@@ -45,11 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Escenario.cs" />
     <Compile Include="IObject.cs" />
     <Compile Include="Object.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Mesa.cs" />
-    <Compile Include="Pata.cs" />
+    <Compile Include="Cubo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

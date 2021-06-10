@@ -12,7 +12,7 @@ namespace Silla
         static void Main(string[] args)
         {
             Game game = new Game(600, 600, "GAME OPENTK");
-            game.Run(60);//1/60
+            game.Run(60.0);//1/60
         }
     }
 }

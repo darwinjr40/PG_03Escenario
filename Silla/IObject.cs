@@ -8,7 +8,6 @@ namespace Silla
 {
     public interface IObject
     {
-
         void draw();
 
         void move();
