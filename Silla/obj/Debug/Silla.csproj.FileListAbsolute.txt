@@ -34,3 +34,12 @@ D:\04_programacionGrafica\03_tarea\03_presente\Silla\bin\Debug\OpenTK.dll
 D:\04_programacionGrafica\03_tarea\03_presente\Silla\bin\Debug\OpenTK.pdb
 D:\04_programacionGrafica\03_tarea\03_presente\Silla\bin\Debug\OpenTK.xml
 D:\04_programacionGrafica\03_tarea\03_presente\Silla\obj\Debug\Silla.csprojResolveAssemblyReference.cache
+D:\04_programacionGrafica\03_tarea\03_presente - copia\Silla\bin\Debug\Silla.exe.config
+D:\04_programacionGrafica\03_tarea\03_presente - copia\Silla\obj\Debug\Silla.exe
+D:\04_programacionGrafica\03_tarea\03_presente - copia\Silla\obj\Debug\Silla.pdb
+D:\04_programacionGrafica\03_tarea\03_presente - copia\Silla\bin\Debug\Silla.exe
+D:\04_programacionGrafica\03_tarea\03_presente - copia\Silla\bin\Debug\Silla.pdb
+D:\04_programacionGrafica\03_tarea\03_presente - copia\Silla\bin\Debug\OpenTK.dll
+D:\04_programacionGrafica\03_tarea\03_presente - copia\Silla\bin\Debug\OpenTK.pdb
+D:\04_programacionGrafica\03_tarea\03_presente - copia\Silla\bin\Debug\OpenTK.xml
+D:\04_programacionGrafica\03_tarea\03_presente - copia\Silla\obj\Debug\Silla.csprojResolveAssemblyReference.cache

@@ -8,10 +8,10 @@ namespace Silla
 {
     class Escenario : Object
     {
-        Dictionary<String, Object> L;
+        Dictionary<string, Object> L;
 
         public Escenario()
-        {   L = new Dictionary<string, Object>();         }
+        { L = new Dictionary<string, Object>(); }
         public override void draw()
         {
         }
@@ -26,25 +26,33 @@ namespace Silla
 
         }
         //-----------------------------------------------------------------------------------------------------
-        public override void climb()
+        public override void scale()
         {
 
-            //-----------------------------------------------------------------------------------------------------
         }
         //-----------------------------------------------------------------------------------------------------
-        public override void add(String name, Object x)
+        public void add(string name, Object x)
         {
+            if (L.ContainsKey(name))
+                remove(name);   
+            
             L.Add(name, x);
         }
         //-----------------------------------------------------------------------------------------------------
-        public override void dibujar(String name)
+        public void remove(string name)
+        {
+            L.Remove(name);
+            L.Count();
+        }
+        //-----------------------------------------------------------------------------------------------------
+        public  void dibujar(string name)
         {
             L[name].draw();
         }
         //-----------------------------------------------------------------------------------------------------
         public  void dibujar()
         {
-            foreach (KeyValuePair<String, Object> kvp in L)
+            foreach (KeyValuePair<string, Object> kvp in L)
             {
                 kvp.Value.draw();
             }

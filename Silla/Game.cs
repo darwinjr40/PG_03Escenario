@@ -12,18 +12,15 @@ using System.Drawing;
 namespace Silla
 {
     class Game : GameWindow
-    {   //darwin estuvo aqui
-        Cubo p = new Cubo(2,2,2, 2,10,2);//espalda
-        Mesa m = new Mesa(0, 0, 0, 5, 5, 5);
+    {   
         int q = 0;
         Escenario es;
         //------------------------------------------------------------------------------------------------------
         public Game(int ancho, int alto, string titulo) : base(ancho, alto, GraphicsMode.Default, titulo){
-                 es = new Escenario();
-                 //es.add("pata1", new Cubo(0, 0, 0));
-                 es.add("cubo", new Cubo(-5, 0, 0));
-                 es.add("mesa1", new Mesa(0, 0, 0, 5, 5, 10));
-                 //es.add("mesa2", new Mesa(-5, 0, 0, 2, 2, 2));
+                es = new Escenario();
+                es.add("silla", new Silla(3, 0, 0, 4, 4, 4));
+                es.add("mesa1", new Mesa(-3, 1, 0, 5, 5, 7));
+                es.add("silla2", new Silla(0, 0, -10, 4, 4, 4));
         }
         //------------------------------------------------------------------------------------------------------
         protected override void OnRenderFrame(FrameEventArgs e)//ejecuta 60 hz
@@ -32,8 +29,9 @@ namespace Silla
             GL.LoadIdentity();
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);//limpia el dibujo 
             GL.Rotate(q, 1, 1, 0);
-            //es.dibujar("pata1");
-            es.dibujar();
+            GL.PushMatrix();
+                 es.dibujar();
+            GL.PopMatrix();
             base.SwapBuffers();
         }
         //------------------------------------------------------------------------------------------------------
@@ -45,8 +43,6 @@ namespace Silla
             GL.LoadIdentity();
             int v = 10;
             GL.Ortho(-v, v, -v, v, -v, 10*v);
-            //Matrix4 matrix = Matrix4.CreatePerspectiveFieldOfView(MathHelper.DegreesToRadians(90.0f),(float)Width/Height,)
-            //GL.LoadMatrix(ref matrix);
             GL.MatrixMode(MatrixMode.Modelview);
         }
         //------------------------------------------------------------------------------------------------------
@@ -55,7 +51,6 @@ namespace Silla
             base.OnUpdateFrame(e);
             KeyboardState input = Keyboard.GetState();
             if (input.IsKeyDown(Key.R)) { q = q % 360 + 2; }
-            if (input.IsKeyDown(Key.Escape)) { Exit(); }
          }
         //------------------------------------------------------------------------------------------------------
         protected override void OnLoad(EventArgs e)
